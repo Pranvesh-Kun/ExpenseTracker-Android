@@ -20,4 +20,8 @@ class ExpenseRepository(
     fun getTotalExpense() : Flow<Double> {
         return expenseDao.getTotalExpense()
     }
+
+    suspend fun updateExpense(expense: Expense) {
+        expenseDao.updateExpense(expense)
+    }
 }

@@ -20,11 +20,16 @@ class ExpenseViewModel @Inject constructor (
         viewModelScope.launch {
             repository.insertExpense(expense)
         }
-
     }
     fun deleteExpense(expense: Expense) {
         viewModelScope.launch {
             repository.deleteExpense(expense)
+        }
+    }
+
+    fun updateExpense(expense: Expense) {
+        viewModelScope.launch {
+            repository.updateExpense(expense)
         }
     }
 }

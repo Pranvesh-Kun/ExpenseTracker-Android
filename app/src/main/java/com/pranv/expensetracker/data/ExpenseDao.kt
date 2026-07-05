@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.pranv.expensetracker.model.Expense
 import kotlinx.coroutines.flow.Flow
 
@@ -18,4 +19,7 @@ interface ExpenseDao {
 
     @Query("SELECT COALESCE(SUM(amount), 0) FROM Expense")
     fun getTotalExpense() : Flow<Double>
+
+    @Update
+    suspend fun updateExpense(expense: Expense)
 }
