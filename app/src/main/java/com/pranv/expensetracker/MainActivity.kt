@@ -1,9 +1,10 @@
 package com.pranv.expensetracker
-
+import android.nfc.tech.MifareUltralight
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.foundation.layout.Arrangement
@@ -45,6 +46,19 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.text.font.FontWeight
 import androidx.room.util.TableInfo
 import com.pranv.expensetracker.utils.DateUtils
+import androidx.compose.material3.SwipeToDismissBox
+import androidx.compose.material3.SwipeToDismissBoxState
+import androidx.compose.material3.rememberSwipeToDismissBoxState
+import androidx.compose.material3.SwipeToDismissBoxValue
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material3.Icon
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -239,13 +253,42 @@ fun ExpenseEntryScreen() {
         LazyColumn(
             modifier = Modifier.fillMaxWidth().weight(1f)
         ) {
-            items(expenses) { expense ->
-                ExpenseItem(
-                    exp = expense,
-                    onDelete = {
-                        viewmodel.deleteExpense(it)
+            items(expenses, key = {it.id}) { expense ->
+                val dismissState = rememberSwipeToDismissBoxState()
+                SwipeToDismissBox(
+                    state = dismissState,
+                    enableDismissFromStartToEnd = false,
+                    onDismiss = { direction ->
+                        if (direction == SwipeToDismissBoxValue.EndToStart) {
+                            viewmodel.deleteExpense(expense)
+                        }
+                    },
+                    backgroundContent = {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(16.dp))
+                                .background(MaterialTheme.colorScheme.error)
+                                .padding(horizontal = 20.dp)
+                                .fillMaxSize(),
+
+                            contentAlignment = Alignment.CenterEnd
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Delete,
+                                contentDescription = "Delete",
+                                tint = MaterialTheme.colorScheme.onError
+                            )
+                        }
                     }
-                )
+                ) {
+                    ExpenseItem(
+                        exp = expense,
+                        onDelete = {
+                            viewmodel.deleteExpense(it)
+                        }
+                    )
+                }
+                Spacer(Modifier.size(8.dp))
             }
         }
     }
@@ -279,13 +322,6 @@ fun ExpenseItem(
                 Column() {
                     Text("${exp.category} • ${exp.paymentType}")
                     Text(text = DateUtils.formatTimestamp(exp.timestamp))
-                }
-                Button(
-                    onClick = {
-                        onDelete(exp)
-                    }
-                ) {
-                    Text(text = "Delete")
                 }
             }
 
