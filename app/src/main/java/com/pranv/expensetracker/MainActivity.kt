@@ -4,10 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -33,6 +39,12 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.pranv.expensetracker.model.Expense
 import androidx.compose.runtime.collectAsState
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.text.font.FontWeight
+import androidx.room.util.TableInfo
+import com.pranv.expensetracker.utils.DateUtils
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -44,6 +56,7 @@ class MainActivity : ComponentActivity() {
                 ExpenseEntryScreen(
 
                 )
+//                Text(text = "hello")
             }
         }
     }
@@ -212,28 +225,71 @@ fun ExpenseEntryScreen() {
                         timestamp = System.currentTimeMillis()
                     )
                 )
+                merchant = ""
+                amount = ""
+                selectedCategory = ""
+                selectedPaymentType = ""
             }
         ) {
             Text(
                 text = "Add Expense"
             )
         }
+        Spacer(modifier = Modifier.height(16.dp))
         LazyColumn(
-//            modifier = Modifier.weight(
+            modifier = Modifier.fillMaxWidth().weight(1f)
         ) {
             items(expenses) { expense ->
-                ExpenseItem(expense)
+                ExpenseItem(
+                    exp = expense,
+                    onDelete = {
+                        viewmodel.deleteExpense(it)
+                    }
+                )
             }
         }
     }
 }
 
 @Composable
-fun ExpenseItem(exp: Expense) {
-    Column(modifier = Modifier.padding(8.dp)) {
-        Text(text = exp.merchant)
-        Text("₹%.2f".format(exp.amount))
-        Text(text = exp.category)
-        Text(text = exp.paymentType)
+fun ExpenseItem(
+    exp: Expense,
+    onDelete: (Expense) -> Unit
+) {
+    Card() {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = exp.merchant,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "₹%.2f".format(exp.amount),
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Spacer(modifier = Modifier.height(4.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column() {
+                    Text("${exp.category} • ${exp.paymentType}")
+                    Text(text = DateUtils.formatTimestamp(exp.timestamp))
+                }
+                Button(
+                    onClick = {
+                        onDelete(exp)
+                    }
+                ) {
+                    Text(text = "Delete")
+                }
+            }
+
+        }
     }
+    Spacer(modifier = Modifier.height(8.dp))
 }
