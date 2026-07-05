@@ -52,15 +52,14 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontStyle
-import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory
-import org.intellij.lang.annotations.JdkConstants
+import androidx.compose.ui.platform.LocalContext
+import com.pranv.expensetracker.utils.ExcelExporter
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import kotlin.math.exp
+import android.content.Intent
+import androidx.core.content.FileProvider
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -180,6 +179,8 @@ fun ExpenseEntryScreen() {
         mutableStateOf(true)
     }
 
+    val context = LocalContext.current
+
     Column(modifier = Modifier.fillMaxSize().padding(vertical = 55.dp, horizontal = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(
@@ -233,17 +234,51 @@ fun ExpenseEntryScreen() {
             }
         }
         Spacer(Modifier.size(8.dp))
-        Button(
-            onClick = {
-                showForm = !showForm
-            }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Text(
-                if (showForm)
-                    "Hide Form ▲"
-                else
-                    "Add Expense ▼"
-            )
+            Button(
+                onClick = {
+                    showForm = !showForm
+                }
+            ) {
+                Text(
+                    if (showForm)
+                        "Hide Form ▲"
+                    else
+                        "Add Expense ▼"
+                )
+            }
+            Button(
+                onClick = {
+                    val file = ExcelExporter.exportExpenses(
+                        context,
+                        expenses
+                    )
+                    val uri = FileProvider.getUriForFile(
+                        context,
+                        "${context.packageName}.provider",
+                        file
+                    )
+                    val intent = Intent(Intent.ACTION_SEND).apply {
+                        type =
+                            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+                        putExtra(Intent.EXTRA_STREAM, uri)
+
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    context.startActivity(
+                        Intent.createChooser(
+                            intent,
+                            "Export Excel"
+                        )
+                    )
+                }
+            ) {
+                Text("Export Excel")
+            }
         }
         Spacer(
             Modifier.size(8.dp)
