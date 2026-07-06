@@ -46,7 +46,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Icon
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -59,7 +58,14 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import android.content.Intent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
+import android.Manifest
+import android.provider.Telephony
+import android.util.Log
+import androidx.compose.foundation.layout.Arrangement
+
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -181,6 +187,113 @@ fun ExpenseEntryScreen() {
 
     val context = LocalContext.current
 
+    val amountPatterns = listOf(
+        Regex("""(?:Rs\.?|INR)\s*([0-9]+(?:\.[0-9]+)?)""", RegexOption.IGNORE_CASE),
+        Regex("""([0-9]+(?:\.[0-9]+)?)\s+sent""", RegexOption.IGNORE_CASE),
+        Regex("""([0-9]+(?:\.[0-9]+)?)\s+spent""", RegexOption.IGNORE_CASE)
+    )
+
+    val merchantPatterns = listOf(
+        Regex("""at\s+([A-Za-z0-9& .'-]+?)(?:\s+using|\s+via|\.|$)""", RegexOption.IGNORE_CASE),
+        Regex("""to\s+([A-Za-z0-9& .'-]+?)(?:\s+using|\s+via|\.|$)""", RegexOption.IGNORE_CASE),
+        Regex("""by\s+([A-Za-z0-9& .'-]+?)(?:\s+using|\s+via|\.|$)""", RegexOption.IGNORE_CASE),
+        Regex("""towards\s+([A-Za-z0-9& .'-]+?)(?:\s+using|\s+via|\.|$)""", RegexOption.IGNORE_CASE),
+        Regex("""paid\s+to\s+([A-Za-z0-9& .'-]+?)(?:\s+using|\s+via|\.|$)""", RegexOption.IGNORE_CASE)
+    )
+
+    var curSmsIndex by remember {
+        mutableStateOf(0)
+    }
+
+    val parsedExpenses = remember {
+        mutableListOf<Expense>()
+    }
+
+    var skipValid by remember {
+        mutableStateOf(false)
+    }
+
+    val permissionLauncher =
+        rememberLauncherForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { granted ->
+            val cursor = context.contentResolver.query(
+                Telephony.Sms.Inbox.CONTENT_URI,
+                null,
+                null,
+                null,
+                Telephony.Sms.DEFAULT_SORT_ORDER
+            )
+            if (cursor != null) {
+                while (cursor.moveToNext()) {
+                    val body = cursor.getString(
+                        cursor.getColumnIndexOrThrow(Telephony.Sms.BODY)
+                    )
+                    val address = cursor.getString(
+                        cursor.getColumnIndexOrThrow(Telephony.Sms.ADDRESS)
+                    )
+                    val smsTimestamp = cursor.getLong(
+                        cursor.getColumnIndexOrThrow(Telephony.Sms.DATE)
+                    )
+                    if (body.contains("debited", ignoreCase = true) ||
+                        body.contains("credited", ignoreCase = true) ||
+                        body.contains("spent", ignoreCase = true) ||
+                        body.contains("NEFT", ignoreCase = true) ||
+                        body.contains("upi", ignoreCase = true)) {
+//                        Log.d("BANK SMS", "$address: $body")
+                       var amount: String? = null
+                        for (pattern in amountPatterns) {
+                            val match = pattern.find(body)
+                            if (match != null) {
+                                amount = match.groupValues[1].trim()
+                                break
+                            }
+                        }
+                        Log.d("AMOUNT", amount?: "Not Found")
+                        var merchant: String? = null
+                        for (pattern in merchantPatterns) {
+                            val match = pattern.find(body)
+                            if (match != null) {
+                                merchant = match.groupValues[1].trim()
+                                break
+                            }
+                        }
+//                        Log.d("MERCHANT", merchant?: "Not Found")
+                        val paymentType = when {
+                            body.contains("UPI", true) -> "UPI"
+                            body.contains("CreditCard", true) ||
+                                    body.contains("Credit Card", true) -> "Credit Card"
+                            body.contains("DebitCard", true) ||
+                                    body.contains("Debit Card", true) -> "Debit Card"
+                            body.contains("NetBanking", true) ||
+                                    body.contains("Net Banking", true) -> "Netbanking"
+                            body.contains("Waller", true) -> "Wallet"
+                            else -> "Other"
+                        }
+                        if (merchant != null && amount != null) {
+                            parsedExpenses.add(
+                                Expense(
+                                    merchant = merchant,
+                                    amount = amount.toDouble(),
+                                    category = "",
+                                    paymentType = "",
+                                    timestamp = smsTimestamp
+                                )
+                            )
+                        }
+                    }
+                }
+                cursor.close()
+                if (parsedExpenses.isNotEmpty()) {
+                    merchant = parsedExpenses[0].merchant
+                    amount = parsedExpenses[0].amount.toString()
+                    selectedCategory = parsedExpenses[0].category
+                    selectedPaymentType = parsedExpenses[0].paymentType
+                    showForm = true
+                }
+            }
+        }
+
     Column(modifier = Modifier.fillMaxSize().padding(vertical = 55.dp, horizontal = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(
@@ -241,13 +354,14 @@ fun ExpenseEntryScreen() {
             Button(
                 onClick = {
                     showForm = !showForm
-                }
+                },
+                modifier = Modifier.width(130.dp)
             ) {
                 Text(
                     if (showForm)
                         "Hide Form ▲"
                     else
-                        "Add Expense ▼"
+                        "Add Expense"
                 )
             }
             Button(
@@ -278,6 +392,14 @@ fun ExpenseEntryScreen() {
                 }
             ) {
                 Text("Export Excel")
+            }
+            Button(onClick = {
+                skipValid = true
+                permissionLauncher.launch(
+                    Manifest.permission.READ_SMS
+                )
+            }) {
+                Text("Import SMS")
             }
         }
         Spacer(
@@ -374,28 +496,64 @@ fun ExpenseEntryScreen() {
             Spacer(
                 Modifier.size(8.dp)
             ) //
-            Button(
-                enabled = isFormValid,
-                onClick = {
-                    viewmodel.addExpense(
-                        Expense(
-                            amount = amount.toDouble(),
-                            merchant = merchant,
-                            category = selectedCategory,
-                            paymentType = selectedPaymentType,
-                            timestamp = System.currentTimeMillis()
+            Row(horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.fillMaxWidth()) {
+                Button(
+                    enabled = isFormValid,
+                    onClick = {
+                        viewmodel.addExpense(
+                            Expense(
+                                amount = amount.toDouble(),
+                                merchant = merchant,
+                                category = selectedCategory,
+                                paymentType = selectedPaymentType,
+                                timestamp = System.currentTimeMillis()
+                            )
                         )
+                        curSmsIndex++
+                        if (curSmsIndex < parsedExpenses.size) {
+                            merchant = parsedExpenses[curSmsIndex].merchant
+                            amount = parsedExpenses[curSmsIndex].amount.toString()
+                            selectedCategory = parsedExpenses[curSmsIndex].category
+                            selectedPaymentType = parsedExpenses[curSmsIndex].paymentType
+                        } else {
+                            showForm = false
+                            merchant = ""
+                            amount = ""
+                            selectedCategory = ""
+                            selectedPaymentType = ""
+                            curSmsIndex = 0
+                            parsedExpenses.clear()
+                            skipValid = false
+                        }
+                    }
+                ) {
+                    Text(
+                        text = "Add Expense"
                     )
-                    merchant = ""
-                    amount = ""
-                    selectedCategory = ""
-                    selectedPaymentType = ""
-                    showForm = false
                 }
-            ) {
-                Text(
-                    text = "Add Expense"
-                )
+                Button(
+                    enabled = skipValid,
+                    onClick = {
+                        curSmsIndex++
+                        if (curSmsIndex < parsedExpenses.size) {
+                            merchant = parsedExpenses[curSmsIndex].merchant
+                            amount = parsedExpenses[curSmsIndex].amount.toString()
+                            selectedCategory = parsedExpenses[curSmsIndex].category
+                            selectedPaymentType = parsedExpenses[curSmsIndex].paymentType
+                        } else {
+                            showForm = false
+                            merchant = ""
+                            amount = ""
+                            selectedCategory = ""
+                            selectedPaymentType = ""
+                            curSmsIndex = 0
+                            parsedExpenses.clear()
+                            skipValid = false
+                        }
+                    }
+                ) {
+                    Text("Skip Expense")
+                }
             }
         }
         Spacer(modifier = Modifier.height(8.dp))
@@ -667,7 +825,6 @@ fun ExpenseItem(
                     Text(text = DateUtils.formatTimestamp(exp.timestamp))
                 }
             }
-
         }
     }
     Spacer(modifier = Modifier.height(8.dp))
