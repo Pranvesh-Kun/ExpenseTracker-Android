@@ -65,6 +65,7 @@ import android.Manifest
 import android.provider.Telephony
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
+import com.pranv.expensetracker.utils.MlCategoryClassifier
 
 
 @AndroidEntryPoint
@@ -294,6 +295,12 @@ fun ExpenseEntryScreen() {
             }
         }
 
+    val classifier = MlCategoryClassifier(context)
+    val (prediction, confidence) = classifier.predict(merchant)
+
+    if (confidence >= 0.6f) {
+        selectedCategory = prediction
+    }
     Column(modifier = Modifier.fillMaxSize().padding(vertical = 55.dp, horizontal = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(

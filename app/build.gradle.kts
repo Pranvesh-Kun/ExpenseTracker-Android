@@ -69,4 +69,5 @@ dependencies {
     implementation(libs.apache.poi.core)
     ksp(libs.hilt.compiler)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+    implementation(libs.onnx.runtime)
 }
