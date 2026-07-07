@@ -1,0 +1,795 @@
+merchant,category
+Zomato,Food
+ZOMATO LTD,Food
+ZOMATO ONLINE,Food
+Zomato Gold,Food
+Swiggy,Food
+SWIGGY LIMITED,Food
+Swiggy Instamart,Food
+Swiggy One,Food
+Blinkit,Food
+Grofers,Food
+GROFERS INDIA,Food
+Zepto,Food
+ZEPTO MARKETPLACE,Food
+BigBasket,Food
+BIG BASKET,Food
+BB Daily,Food
+BBDAILY,Food
+Dunzo,Food
+DUNZO DIGITAL,Food
+Domino's Pizza,Food
+DOMINOS,Food
+DOMINOS PIZZA,Food
+JUBILANT FOODWORKS,Food
+Pizza Hut,Food
+PIZZAHUT,Food
+McDonald's,Food
+MCDONALDS,Food
+MC DONALDS,Food
+MCD INDIA,Food
+Westlife Foodworld,Food
+KFC,Food
+KFC INDIA,Food
+KENTUCKY FRIED CHICKEN,Food
+Burger King,Food
+BURGERKING INDIA,Food
+Subway,Food
+SUBWAY INDIA,Food
+SUBWAY SYSTEMS,Food
+Starbucks,Food
+TATA STARBUCKS,Food
+Cafe Coffee Day,Food
+CCD,Food
+Barista,Food
+BARISTA COFFEE,Food
+BARISTA LAVAZZA,Food
+Chaayos,Food
+Third Wave Coffee,Food
+Blue Tokai Coffee,Food
+BLUE TOKAI,Food
+Haldiram's,Food
+HALDIRAM,Food
+HALDIRAMS,Food
+Bikanervala,Food
+Sagar Ratna,Food
+Saravana Bhavan,Food
+HOTEL SARAVANA BHAVAN,Food
+A2B,Food
+ADYAR ANANDA BHAVAN,Food
+A2B RESTAURANT,Food
+Anjappar,Food
+ANJAPPAR CHETTINAD,Food
+Behrouz Biryani,Food
+Faasos,Food
+REBEL FOODS,Food
+Ovenstory Pizza,Food
+OVEN STORY,Food
+Wow Momo,Food
+Theobroma,Food
+THEOBROMA PATISSERIE,Food
+Karachi Bakery,Food
+Monginis,Food
+MONGINIS CAKE,Food
+Baskin Robbins,Food
+BASKINROBBINS,Food
+Naturals Ice Cream,Food
+Amul,Food
+AMUL PARLOUR,Food
+AMUL ICE CREAM,Food
+Keventers,Food
+Chai Point,Food
+Tea Trails,Food
+Nature's Basket,Food
+NATURES BASKET,Food
+GODREJ NATURES BASKET,Food
+Reliance Fresh,Food
+RELIANCE RETAIL FRESH,Food
+Reliance Smart Bazaar,Food
+SMART BAZAAR,Food
+More Supermarket,Food
+MORE RETAIL,Food
+ADITYA BIRLA MORE,Food
+Spencer's Retail,Food
+SPENCERS RETAIL,Food
+SPENCERS,Food
+Nilgiris,Food
+NILGIRIS SUPERMARKET,Food
+Star Bazaar,Food
+TATA STAR BAZAAR,Food
+DMart,Food
+D MART,Food
+AVENUE SUPERMARTS,Food
+DMART READY,Food
+Food Hall,Food
+FOODHALL INDIA,Food
+Licious,Food
+DELIGHTFUL GOURMET,Food
+FreshToHome,Food
+FRESH TO HOME,Food
+Milkbasket,Food
+Country Delight,Food
+EatFit,Food
+EAT FIT,Food
+CUREFIT EATFIT,Food
+Box8,Food
+Freshmenu,Food
+FRESH MENU,Food
+Local Bakery,Food
+LOCAL RESTAURANT,Food
+HOTEL AND RESTAURANT,Food
+Udupi Restaurant,Food
+UDUPI HOTEL,Food
+Nandhana Palace,Food
+NANDHANA,Food
+Empire Restaurant,Food
+EMPIRE HOTEL,Food
+Meghana Foods,Food
+Paradise Biryani,Food
+PARADISE FOOD COURT,Food
+Shah Ghouse,Food
+Bawarchi,Food
+BAWARCHI RESTAURANT,Food
+Kailash Parbat,Food
+Truffles,Food
+TRUFFLES RESTAURANT,Food
+Absolute Barbecues,Food
+AB'S,Food
+Barbeque Nation,Food
+Ministry of Beer,Food
+MOB RESTAURANT,Food
+Social,Food
+SOCIAL RESTAURANT,Food
+IMPRESARIO,Food
+Chili's,Food
+CHILIS INDIA,Food
+TGI Friday's,Food
+TGI FRIDAYS,Food
+Uber,Travel
+UBER INDIA,Travel
+UBER TRIP,Travel
+UBER *TRIP,Travel
+Ola Cabs,Travel
+OLA,Travel
+OLACABS,Travel
+ANI TECHNOLOGIES,Travel
+Ola Money,Travel
+Rapido,Travel
+RAPIDO BIKE TAXI,Travel
+IRCTC,Travel
+IRCTC LTD,Travel
+IRCTC ONLINE,Travel
+INDIAN RAILWAYS,Travel
+MakeMyTrip,Travel
+MMT,Travel
+Yatra,Travel
+YATRA ONLINE,Travel
+YATRA.COM,Travel
+Goibibo,Travel
+GO MMT,Travel
+Cleartrip,Travel
+EaseMyTrip,Travel
+EASE MY TRIP,Travel
+redBus,Travel
+RED BUS,Travel
+AbhiBus,Travel
+IndiGo,Travel
+INDIGO AIRLINES,Travel
+INTERGLOBE AVIATION,Travel
+6E INDIGO,Travel
+SpiceJet,Travel
+SPICEJET LTD,Travel
+Air India,Travel
+AIR INDIA LTD,Travel
+Vistara,Travel
+VISTARA AIRLINES,Travel
+TATA SIA,Travel
+Akasa Air,Travel
+Indian Oil,Travel
+INDIAN OIL CORP,Travel
+IOCL,Travel
+IOC PETROL PUMP,Travel
+Bharat Petroleum,Travel
+BPCL,Travel
+Hindustan Petroleum,Travel
+HPCL,Travel
+HP PETROL PUMP,Travel
+Shell Petrol Pump,Travel
+SHELL INDIA,Travel
+SHELL FUEL,Travel
+Reliance Petrol Pump,Travel
+RELIANCE PETROLEUM,Travel
+FASTag Recharge,Travel
+FASTAG,Travel
+NETC FASTAG,Travel
+PAYTM FASTAG,Travel
+NHAI Toll,Travel
+NHAI TOLL PLAZA,Travel
+TOLL PLAZA,Travel
+Delhi Metro,Travel
+DMRC,Travel
+DELHI METRO RAIL,Travel
+Namma Metro,Travel
+BMRCL,Travel
+BANGALORE METRO,Travel
+Chennai Metro,Travel
+CMRL,Travel
+CHENNAI METRO RAIL,Travel
+Mumbai Metro,Travel
+MMRDA METRO,Travel
+Hyderabad Metro,Travel
+L&T METRO HYDERABAD,Travel
+BEST Bus,Travel
+BEST UNDERTAKING MUMBAI,Travel
+TSRTC,Travel
+TELANGANA STATE RTC,Travel
+KSRTC,Travel
+KARNATAKA STATE RTC,Travel
+KERALA STATE RTC,Travel
+MSRTC,Travel
+MAHARASHTRA STATE RTC,Travel
+APSRTC,Travel
+ANDHRA PRADESH RTC,Travel
+Zoomcar,Travel
+ZOOMCAR INDIA,Travel
+Revv Self Drive,Travel
+REVV CARS,Travel
+Bounce Bike Rental,Travel
+BOUNCE SHARE,Travel
+Yulu Bikes,Travel
+YULU BIKE,Travel
+Trivago,Travel
+TRIVAGO HOTEL,Travel
+OYO Rooms,Travel
+OYO,Travel
+OYO HOTELS,Travel
+Airbnb,Travel
+AIRBNB PAYMENTS,Travel
+AIRBNB INDIA,Travel
+Booking.com,Travel
+BOOKING COM,Travel
+Agoda,Travel
+AGODA COM,Travel
+Treebo Hotels,Travel
+TREEBO,Travel
+FabHotels,Travel
+FAB HOTELS,Travel
+Parking App - Park+,Travel
+PARK PLUS,Travel
+GET MY PARKING,Travel
+Amazon,Shopping
+AMAZON.IN,Shopping
+AMAZON PAY,Shopping
+AMZN,Shopping
+AMAZON SELLER,Shopping
+Flipkart,Shopping
+FLIPKART INTERNET,Shopping
+FKRT,Shopping
+FLIPKART.COM,Shopping
+Myntra,Shopping
+MYNTRA DESIGNS,Shopping
+MYNTRA.COM,Shopping
+Ajio,Shopping
+AJIO.COM,Shopping
+RELIANCE AJIO,Shopping
+Nykaa,Shopping
+FSN E-COMMERCE,Shopping
+NYKAA FASHION,Shopping
+NYKAA.COM,Shopping
+Meesho,Shopping
+FASHNEAR TECHNOLOGIES,Shopping
+Snapdeal,Shopping
+SNAPDEAL.COM,Shopping
+ShopClues,Shopping
+Tata Cliq,Shopping
+TATACLIQ,Shopping
+Croma,Shopping
+CROMA RETAIL,Shopping
+INFINITI RETAIL,Shopping
+Reliance Digital,Shopping
+Vijay Sales,Shopping
+Pai International,Shopping
+POORVIKA MOBILES,Shopping
+PAI ELECTRONICS,Shopping
+Sangeetha Mobiles,Shopping
+Big Bazaar,Shopping
+FUTURE RETAIL,Shopping
+Central,Shopping
+CENTRAL MALL,Shopping
+PANTALOON CENTRAL,Shopping
+Pantaloons,Shopping
+PANTALOONS FASHION,Shopping
+Westside,Shopping
+WESTSIDE STORE,Shopping
+TRENT LIMITED,Shopping
+Lifestyle,Shopping
+LIFESTYLE STORES,Shopping
+LANDMARK LIFESTYLE,Shopping
+Shoppers Stop,Shopping
+Max Fashion,Shopping
+LANDMARK GROUP MAX,Shopping
+Reliance Trends,Shopping
+Zudio,Shopping
+ZUDIO TRENT,Shopping
+H&M,Shopping
+H AND M INDIA,Shopping
+HM RETAIL,Shopping
+Zara,Shopping
+ZARA INDIA,Shopping
+INDITEX TRENT,Shopping
+Levi's,Shopping
+LEVIS STORE,Shopping
+LEVI STRAUSS,Shopping
+Peter England,Shopping
+Van Heusen,Shopping
+Allen Solly,Shopping
+Louis Philippe,Shopping
+Raymond,Shopping
+RAYMOND STORE,Shopping
+Fabindia,Shopping
+FABINDIA OVERSEAS,Shopping
+Decathlon,Shopping
+DECATHLON SPORTS INDIA,Shopping
+Nike,Shopping
+NIKE INDIA,Shopping
+NIKE STORE,Shopping
+Adidas,Shopping
+ADIDAS INDIA,Shopping
+Puma,Shopping
+PUMA INDIA STORE,Shopping
+Bata,Shopping
+BATA INDIA,Shopping
+Metro Shoes,Shopping
+Titan Company,Shopping
+TITAN WORLD,Shopping
+TITAN EYE PLUS,Shopping
+Tanishq,Shopping
+TANISHQ JEWELLERY,Shopping
+Kalyan Jewellers,Shopping
+Malabar Gold,Shopping
+MALABAR GOLD AND DIAMONDS,Shopping
+Joyalukkas,Shopping
+JOYALUKKAS JEWELLERY,Shopping
+PC Jeweller,Shopping
+Chumbak,Shopping
+CHUMBAK DESIGN,Shopping
+IKEA,Shopping
+IKEA INDIA,Shopping
+Pepperfry,Shopping
+PEPPERFRY.COM,Shopping
+TRENDSUTRA,Shopping
+Urban Ladder,Shopping
+HomeCentre,Shopping
+HOME CENTRE,Shopping
+LANDMARK HOME CENTRE,Shopping
+FirstCry,Shopping
+FIRSTCRY.COM,Shopping
+BRAINBEES SOLUTIONS,Shopping
+Lenskart,Shopping
+LENSKART.COM,Shopping
+Purplle,Shopping
+PURPLLE.COM,Shopping
+Ajmera Fashion,Shopping
+SOCH CLOTHING,Shopping
+Big Bazaar Fashion at Big Bazaar,Shopping
+FBB FASHION,Shopping
+Apple Store,Shopping
+APPLE INDIA,Shopping
+APPLE RETAIL,Shopping
+Mi Store,Shopping
+XIAOMI INDIA,Shopping
+MI HOME,Shopping
+Samsung Store,Shopping
+SAMSUNG INDIA ELECTRONICS,Shopping
+OnePlus Store,Shopping
+ONEPLUS TECHNOLOGY,Shopping
+JioMart,Shopping
+RELIANCE JIOMART,Shopping
+BookMyShow Merchandise,Shopping
+BMS SHOP,Shopping
+Local Kirana Store,Shopping
+GENERAL STORE,Shopping
+KIRANA STORE,Shopping
+Apollo Pharmacy,Medical
+APOLLO PHARMACIES,Medical
+Netmeds,Medical
+NETMEDS.COM,Medical
+VKARE TECHNOLOGIES,Medical
+PharmEasy,Medical
+API HOLDINGS,Medical
+1mg,Medical
+TATA 1MG,Medical
+1MG TECHNOLOGIES,Medical
+MedPlus,Medical
+MEDPLUS PHARMACY,Medical
+Wellness Forever,Medical
+WELLNESS FOREVER PHARMACY,Medical
+Apollo Hospitals,Medical
+APOLLO HOSPITALS ENTERPRISE,Medical
+Fortis Healthcare,Medical
+FORTIS HOSPITAL,Medical
+Max Healthcare,Medical
+MAX SUPER SPECIALITY HOSPITAL,Medical
+Manipal Hospitals,Medical
+MANIPAL HOSPITAL,Medical
+Narayana Health,Medical
+NARAYANA HRUDAYALAYA,Medical
+Medanta,Medical
+MEDANTA HOSPITAL,Medical
+GLOBAL HEALTH MEDANTA,Medical
+AIIMS,Medical
+ALL INDIA INSTITUTE MEDICAL SCIENCES,Medical
+Kokilaben Hospital,Medical
+KOKILABEN DHIRUBHAI AMBANI HOSPITAL,Medical
+Columbia Asia Hospital,Medical
+COLUMBIA ASIA,Medical
+KIMS Hospitals,Medical
+KIMS HOSPITAL,Medical
+Rainbow Hospitals,Medical
+RAINBOW CHILDRENS HOSPITAL,Medical
+Cloudnine Hospital,Medical
+CLOUDNINE HOSPITALS,Medical
+Dr Lal PathLabs,Medical
+LAL PATHLABS,Medical
+Metropolis Healthcare,Medical
+METROPOLIS LABS,Medical
+Thyrocare,Medical
+THYROCARE TECHNOLOGIES,Medical
+SRL Diagnostics,Medical
+Practo,Medical
+PRACTO TECHNOLOGIES,Medical
+Tata AIG Health Insurance,Medical
+TATA AIG HEALTH,Medical
+Star Health Insurance,Medical
+STAR HEALTH AND ALLIED,Medical
+HDFC Ergo Health,Medical
+HDFC ERGO HEALTH INSURANCE,Medical
+ICICI Lombard Health,Medical
+Max Bupa Health Insurance,Medical
+NIVA BUPA HEALTH,Medical
+Care Health Insurance,Medical
+RELIGARE CARE HEALTH,Medical
+Cult.fit Care,Medical
+CUREFIT HEALTHCARE,Medical
+Local Clinic,Medical
+MEDICAL CENTRE,Medical
+DIAGNOSTIC CENTRE,Medical
+Dental Clinic,Medical
+DENTAL CARE CLINIC,Medical
+Optometrist / Eye Clinic,Medical
+EYE CARE CENTRE,Medical
+Physiotherapy Centre,Medical
+PHYSIOTHERAPY CLINIC,Medical
+Ayurvedic Store,Medical
+PATANJALI AYURVED STORE,Medical
+Homeopathy Clinic,Medical
+HOMEOPATHIC CLINIC,Medical
+BYJU'S,Education
+BYJUS,Education
+THINK AND LEARN PVT LTD,Education
+Unacademy,Education
+SORTING HAT TECHNOLOGIES,Education
+Vedantu,Education
+VEDANTU INNOVATIONS,Education
+PhysicsWallah,Education
+PHYSICS WALLAH,Education
+PW,Education
+Aakash Institute,Education
+AAKASH EDUCATIONAL SERVICES,Education
+Allen Career Institute,Education
+FIITJEE,Education
+FIITJEE LTD,Education
+Toppr,Education
+TOPPR TECHNOLOGIES,Education
+Coursera,Education
+COURSERA INC,Education
+Udemy,Education
+UDEMY INC,Education
+upGrad,Education
+UPGRAD EDUCATION,Education
+Simplilearn,Education
+SIMPLILEARN SOLUTIONS,Education
+Great Learning,Education
+GREAT LEARNING GREAT LAKES,Education
+Skill-Lync,Education
+SKILL LYNC,Education
+Scaler Academy,Education
+INTERVIEWBIT,Education
+GeeksforGeeks,Education
+GFG COURSES,Education
+CodingNinjas,Education
+CODING NINJAS,Education
+LeetCode Premium,Education
+LEETCODE,Education
+Coding Blocks,Education
+National Institute of Open Schooling,Education
+NIOS FEE,Education
+Amity University,Education
+AMITY UNIVERSITY FEE,Education
+VIT Vellore,Education
+VIT UNIVERSITY FEE,Education
+SSN College,Education
+SSN COLLEGE OF ENGINEERING FEE,Education
+Anna University,Education
+ANNA UNIVERSITY FEE,Education
+SRM University,Education
+SRM UNIVERSITY FEE,Education
+Manipal Academy,Education
+MANIPAL ACADEMY OF HIGHER EDUCATION,Education
+School Fee Payment,Education
+SCHOOL FEES,Education
+TUITION FEE PAYMENT,Education
+Kendriya Vidyalaya Fee,Education
+KV SCHOOL FEE,Education
+DPS School Fee,Education
+DELHI PUBLIC SCHOOL FEE,Education
+Kumon Learning Centre,Education
+KUMON CENTRE,Education
+Crossword Bookstore,Education
+CROSSWORD BOOK STORE,Education
+Sapna Book House,Education
+Higginbothams,Education
+HIGGINBOTHAMS BOOKS,Education
+Amazon Kindle,Education
+KINDLE STORE,Education
+NPTEL,Education
+NPTEL SWAYAM,Education
+LinkedIn Learning,Education
+Duolingo Plus,Education
+DUOLINGO,Education
+Chegg,Education
+CHEGG INDIA,Education
+CHEGG STUDY,Education
+BSES Electricity,Utilities
+BSES RAJDHANI,Utilities
+BSES YAMUNA,Utilities
+Tata Power,Utilities
+TATA POWER DELHI DISTRIBUTION,Utilities
+Adani Electricity,Utilities
+ADANI ELECTRICITY MUMBAI,Utilities
+TANGEDCO,Utilities
+TAMIL NADU ELECTRICITY BOARD,Utilities
+MSEB / MSEDCL,Utilities
+MAHARASHTRA STATE ELECTRICITY,Utilities
+KSEB,Utilities
+KERALA STATE ELECTRICITY BOARD,Utilities
+BESCOM,Utilities
+BANGALORE ELECTRICITY SUPPLY,Utilities
+TSSPDCL,Utilities
+TELANGANA SOUTHERN POWER,Utilities
+APSPDCL,Utilities
+ANDHRA PRADESH SOUTHERN POWER,Utilities
+WBSEDCL,Utilities
+WEST BENGAL ELECTRICITY,Utilities
+UPPCL,Utilities
+UTTAR PRADESH POWER CORP,Utilities
+PSPCL,Utilities
+PUNJAB STATE POWER CORP,Utilities
+Water Board Bill,Utilities
+JALKAL VIBHAG,Utilities
+CMWSSB WATER BILL,Utilities
+Indane Gas,Utilities
+INDANE LPG,Utilities
+IOCL GAS BOOKING,Utilities
+HP Gas,Utilities
+HP LPG BOOKING,Utilities
+Bharat Gas,Utilities
+BHARAT GAS BOOKING,Utilities
+BPCL LPG,Utilities
+Mahanagar Gas,Utilities
+MAHANAGAR GAS LTD,Utilities
+Adani Gas,Utilities
+ADANI TOTAL GAS,Utilities
+Airtel Postpaid,Utilities
+BHARTI AIRTEL,Utilities
+AIRTEL RECHARGE,Utilities
+Jio Recharge,Utilities
+RELIANCE JIO,Utilities
+JIO PREPAID,Utilities
+Vi Vodafone Idea,Utilities
+VODAFONE IDEA,Utilities
+VI RECHARGE,Utilities
+VI POSTPAID,Utilities
+BSNL,Utilities
+BSNL RECHARGE,Utilities
+BHARAT SANCHAR NIGAM,Utilities
+Airtel Broadband,Utilities
+AIRTEL XSTREAM FIBER,Utilities
+Jio Fiber,Utilities
+JIOFIBER,Utilities
+ACT Fibernet,Utilities
+ACT BROADBAND,Utilities
+Hathway Broadband,Utilities
+HATHWAY CABLE,Utilities
+Tata Play Broadband,Utilities
+TATA PLAY FIBER,Utilities
+Excitel Broadband,Utilities
+Tata Play DTH,Utilities
+TATA SKY,Utilities
+TATA PLAY,Utilities
+Dish TV,Utilities
+DISH TV INDIA,Utilities
+Sun Direct DTH,Utilities
+SUN DIRECT,Utilities
+Airtel Digital TV,Utilities
+AIRTEL DTH,Utilities
+Videocon D2H,Utilities
+D2H VIDEOCON,Utilities
+Society Maintenance Bill,Utilities
+APARTMENT MAINTENANCE,Utilities
+RWA MAINTENANCE FEE,Utilities
+Netflix,Others
+NETFLIX.COM,Others
+NETFLIX SUBSCRIPTION,Others
+Amazon Prime,Others
+AMAZON PRIME VIDEO,Others
+PRIME VIDEO,Others
+Disney+ Hotstar,Others
+HOTSTAR,Others
+DISNEY HOTSTAR,Others
+Spotify,Others
+SPOTIFY INDIA,Others
+SPOTIFY AB,Others
+JioCinema,Others
+JIO CINEMA,Others
+SonyLIV,Others
+SONY LIV,Others
+ZEE5,Others
+ZEE5 SUBSCRIPTION,Others
+YouTube Premium,Others
+YOUTUBE PREMIUM GOOGLE,Others
+Apple Music,Others
+APPLE MUSIC ITUNES,Others
+BookMyShow,Others
+BIG TREE ENTERTAINMENT,Others
+PVR Cinemas,Others
+PVR LIMITED,Others
+PVR INOX,Others
+INOX Movies,Others
+INOX LEISURE,Others
+Cult.fit,Others
+CUREFIT TECHNOLOGIES,Others
+CULTFIT MEMBERSHIP,Others
+Gold's Gym,Others
+GOLDS GYM MEMBERSHIP,Others
+Anytime Fitness,Others
+ANYTIME FITNESS MEMBERSHIP,Others
+Local Gym Membership,Others
+FITNESS CENTRE MEMBERSHIP,Others
+Lakme Salon,Others
+Naturals Salon,Others
+NATURALS SALON AND SPA,Others
+Jawed Habib Salon,Others
+JAWED HABIB HAIR,Others
+Urban Company,Others
+URBAN COMPANY SERVICES,Others
+URBAN CLAP,Others
+LIC Premium,Others
+LIC OF INDIA PREMIUM,Others
+LIC INSURANCE,Others
+HDFC Life Insurance,Others
+HDFC LIFE PREMIUM,Others
+ICICI Prudential Life,Others
+ICICI PRU LIFE,Others
+SBI Life Insurance,Others
+SBI LIFE PREMIUM,Others
+Max Life Insurance,Others
+MAX LIFE PREMIUM,Others
+Bajaj Allianz Insurance,Others
+BAJAJ ALLIANZ PREMIUM,Others
+ACKO Insurance,Others
+ACKO GENERAL INSURANCE,Others
+Digit Insurance,Others
+GO DIGIT INSURANCE,Others
+House Rent Payment,Others
+RENT PAYMENT NEFT,Others
+NOBROKER RENT PAY,Others
+NoBroker,Others
+NOBROKER TECHNOLOGIES,Others
+Home Loan EMI,Others
+HOUSING LOAN EMI,Others
+HDFC HOME LOAN EMI,Others
+Car Loan EMI,Others
+AUTO LOAN EMI,Others
+Personal Loan EMI,Others
+PERSONAL LOAN EMI PAYMENT,Others
+Bajaj Finserv EMI,Others
+Credit Card Bill Payment,Others
+CREDIT CARD PAYMENT,Others
+CC BILL PAYMENT,Others
+ATM Cash Withdrawal,Others
+ATM WDL,Others
+CASH WITHDRAWAL ATM,Others
+Bank Service Charge,Others
+BANK CHARGES,Others
+AMC CHARGES BANK,Others
+Paytm Wallet Add Money,Others
+PAYTM WALLET,Others
+PAYTM PAYMENTS BANK,Others
+PhonePe Wallet,Others
+PHONEPE,Others
+PHONEPE PAYMENTS,Others
+Google Pay,Others
+GPAY,Others
+GOOGLE PAY UPI,Others
+Mobikwik Wallet,Others
+MOBIKWIK,Others
+Freecharge Wallet,Others
+FREECHARGE,Others
+Zerodha Investment,Others
+ZERODHA BROKING,Others
+KITE ZERODHA,Others
+Groww Investment,Others
+GROWW INVEST,Others
+Upstox Investment,Others
+UPSTOX SECURITIES,Others
+Mutual Fund SIP,Others
+SIP MUTUAL FUND,Others
+CAMS SIP PAYMENT,Others
+PPF Deposit,Others
+PUBLIC PROVIDENT FUND DEPOSIT,Others
+NPS Contribution,Others
+NATIONAL PENSION SYSTEM,Others
+Donation - Temple,Others
+TEMPLE DONATION,Others
+TIRUPATI TRUST DONATION,Others
+Donation - NGO,Others
+NGO DONATION,Others
+CHARITY DONATION,Others
+PM Cares Fund,Others
+PM CARES DONATION,Others
+Gift Purchase,Others
+GIFT CARD PURCHASE,Others
+AMAZON GIFT CARD,Others
+Matrimony Site Subscription,Others
+SHAADI.COM SUBSCRIPTION,Others
+BHARATMATRIMONY,Others
+Dating App Subscription,Others
+TINDER SUBSCRIPTION,Others
+BUMBLE PREMIUM,Others
+LinkedIn Premium,Others
+LINKEDIN PREMIUM SUBSCRIPTION,Others
+Microsoft 365 Subscription,Others
+MICROSOFT 365,Others
+OFFICE 365 SUBSCRIPTION,Others
+Google One Storage,Others
+GOOGLE ONE SUBSCRIPTION,Others
+iCloud Storage,Others
+APPLE ICLOUD STORAGE,Others
+Adobe Creative Cloud,Others
+ADOBE SUBSCRIPTION,Others
+ChatGPT Plus Subscription,Others
+OPENAI CHATGPT PLUS,Others
+Claude Pro Subscription,Others
+ANTHROPIC CLAUDE PRO,Others
+Courier / Delivery Charges,Others
+BLUEDART COURIER,Others
+DELHIVERY COURIER,Others
+Postal Service - India Post,Others
+INDIA POST SPEED POST,Others
+Traffic Challan Payment,Others
+TRAFFIC POLICE CHALLAN,Others
+E CHALLAN PAYMENT,Others
+Passport Seva Fee,Others
+PASSPORT SEVA KENDRA,Others
+RTO Vehicle Registration,Others
+RTO FEE PAYMENT,Others
+Aadhaar Update Fee,Others
+UIDAI AADHAAR UPDATE,Others
+Income Tax Payment,Others
+INCOME TAX DEPARTMENT,Others
+TDS PAYMENT,Others
+GST Payment,Others
+GST PORTAL PAYMENT,Others
+Pet Store,Others
+PET SUPPLIES STORE,Others
+HEADS UP FOR TAILS,Others
+Photography Studio,Others
+PHOTO STUDIO PAYMENT,Others
+Movers and Packers,Others
+PACKERS AND MOVERS SERVICE,Others
+Astrology Consultation,Others
+ASTROLOGER CONSULTATION FEE,Others
+Miscellaneous UPI Transfer,Others
+UPI TRANSFER TO INDIVIDUAL,Others
+PERSON TO PERSON UPI,Others
