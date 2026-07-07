@@ -49,25 +49,17 @@ A modern Android expense tracker built with Kotlin and Jetpack Compose, featurin
 ## 🏗️ Architecture
 
 ```text
-                   User Interface
-               (Jetpack Compose UI)
-                        │
-                        ▼
-                  ViewModel (MVVM)
-                        │
-                        ▼
-                   Repository Layer
-                  ↙                ↘
-                 ▼                  ▼
-         Room Database      ONNX ML Classifier
-             │                    │
-             ▼                    ▼
-      Expense Storage      Category Prediction
-
-                 ▲
-                 │
-      SMS Import / Excel Export
+Jetpack Compose
+       │
+       ▼
+ViewModel (UI State)
+       │
+       ▼
+Repository (Data Layer)
+   ├── Room Database
+   └── ONNX Classifier
 ```
+
 ## 🧠 Machine Learning Pipeline
 
 The application uses an on-device machine learning model to automatically predict expense categories from merchant names, eliminating the need for manual categorization while keeping all inference completely offline.
@@ -149,4 +141,8 @@ git clone https://github.com/<your-username>/ExpenseTracker.git
 ## 🤝 Contributing
 
 Contributions, suggestions, and bug reports are welcome. Feel free to fork the repository, open an issue, or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
